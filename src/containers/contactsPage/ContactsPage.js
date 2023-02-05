@@ -17,9 +17,7 @@ export const ContactsPage = ({ contactsData, addContact }) => {
   const [values, setValues] = useState(initialValues);
   const [duplicate, setDuplicate] = useState(false)
 
-  const reset = () => {
-    return setValues(initialValues);
-  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +27,7 @@ export const ContactsPage = ({ contactsData, addContact }) => {
     */
    if (!duplicate) {
     addContact(values.name, values.phone, values.email);
-    reset()
+    return setValues(initialValues);
    } else {
     //remove later
     alert('duplicate name');
