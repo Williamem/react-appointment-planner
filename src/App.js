@@ -22,10 +22,10 @@ function App() {
   Implement functions to add data to
   contacts and appointments
   */
- const addContact = (name, phoneNumber, email) => {
+ const addContact = (name, phone, email) => {
   const contactsObject = {
     name: name,
-    phoneNumber: phoneNumber,
+    phone: phone,
     email: email,
   }
   return setContactsData([...contactsData, contactsObject]);
