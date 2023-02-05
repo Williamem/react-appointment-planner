@@ -38,13 +38,6 @@ export const ContactsPage = ({ contactsData, addContact }) => {
     set
   } */
 
-  const handleChange = (e) => {
-    const {name, value} = e.target;
-    setValues({
-      ...values,
-      [name]: value,
-    })
-  }
 
   /*
   Using hooks, check for contact name in the 
@@ -80,9 +73,9 @@ export const ContactsPage = ({ contactsData, addContact }) => {
         <h2>Add Contacts</h2>
         <p style={{color: 'red'}}>{duplicate ? 'Name already exists' : ''}</p>
         <ContactForm
-          handleChange={handleChange}
           handleSubmit={handleSubmit}
           values={values}
+          setValues={setValues}
         />
       </section>
       <hr />
