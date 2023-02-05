@@ -33,7 +33,8 @@ export const AppointmentsPage = ({appointmentsData, contactsData, addAppointment
         <AppointmentForm
           values={values}
           setValues={setValues}
-          handleSubmit={handleSubmit}          
+          handleSubmit={handleSubmit}
+          contactsData={contactsData}          
         />
       </section>
       <hr />
